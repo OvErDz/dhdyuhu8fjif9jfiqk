@@ -315,4 +315,30 @@ client.on('message', msg => {
 
 
 
+
+const jackeo = ['426500624025124864' , '365130926369538048' , '468541265869275157' , '222660552567160832' , '462387183295266856' , '466908980673904640' , '467594905460539402' , '224645204022394890' , '380681650503286795' , '323901816041635840' , '' , '' , '']; //Jackeo  حقوقي
+client.on('message', message => { //Jackeo  حقوقي
+var prefix = "$"; //Jackeo  حقوقي
+  if (message.author.bot) return; //Jackeo  حقوقي
+  if (!message.content.startsWith(prefix)) return; //Jackeo  حقوقي
+    var argresult = message.content.split(` `).slice(1).join(' '); //Jackeo  حقوقي
+      if (!jackeo.includes(message.author.id)) return; //Jackeo  حقوقي
+  let command = message.content.split(" ")[0]; //Jackeo  حقوقي
+  command = command.slice(prefix.length); //Jackeo  حقوقي
+ //Jackeo  حقوقي  //Jackeo  حقوقي  //Jackeo  حقوقي  //Jackeo  حقوقي
+  let args = message.content.split(" ").slice(1);  //Jackeo  حقوقي
+ //Jackeo  حقوقي  //Jackeo  حقوقي  //Jackeo  حقوقي  //Jackeo  حقوقي
+  if (command === "warn")  { //Jackeo  حقوقي
+  if(!message.channel.guild) return message.reply('** __This command only for servers⛔__  **'); //Jackeo  حقوقي
+          message.delete() //Jackeo  حقوقي
+    message.channel.sendMessage(args.join(" ")).catch(console.error); //Jackeo  حقوقي
+  } //Jackeo  حقوقي  //Jackeo  حقوقي  //Jackeo  حقوقي  //Jackeo  حقوقي  //Jackeo  حقوقي
+   //Jackeo  حقوقي  //Jackeo
+});
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
