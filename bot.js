@@ -286,7 +286,6 @@ client.on("guildMemberAdd", function(member) {
 
 
 
-
 client.on('message', msg => {
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
@@ -297,10 +296,10 @@ client.on('message', msg => {
     if(command === "clear") {
         const emoji = client.emojis.find("name", "wastebasket")
     let textxt = args.slice(0).join("");
-    if(msg.member.hasPermission("EMBED_LINKS")) {
+    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
     if (textxt == "") {
         msg.delete().then
-    msg.channel.send("**```ضع عدد الرسائل التي تريد مسحها```**").then(m => m.delete(3000));
+    msg.channel.send("***```ضع عدد الرسائل التي تريد مسحها 👌```***").then(m => m.delete(3000));
 } else {
     msg.delete().then
     msg.delete().then
@@ -310,7 +309,6 @@ client.on('message', msg => {
     }
 }
 });
-
 
 
 
