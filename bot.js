@@ -375,6 +375,7 @@ if (!message.content.startsWith(prefix)) return;
 
 
 
+
 client.on('message' , message => {
 if (message.content === '$help') {
          let embed = new Discord.RichEmbed()
@@ -399,6 +400,8 @@ if (message.content === '$help') {
   message.author.sendEmbed(embed);
     }
 });
+
+
 
 
 
