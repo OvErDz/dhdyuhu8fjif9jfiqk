@@ -385,16 +385,14 @@ if (message.content === '$help') {
       .addField("**$myid**","**أمر اذا انت على الجوال ومو عارف تطلع اي دي حسابك تكتبه ويطلع لك**")
       .addField("**$members**","**أمر لاظهار حالات الأعضاء**")
        .addField("**$ping**","**أمرلاظهار سرعة البوت**")
-       .addField("**$invite**","**معلومات الامر**")
-       .addField("**$id**","**أمرلارسال رابط السيرفر بالخاص**")
-	   
+       .addField("**$invite**","**أمرلارسال رابط السيرفر بالخاص**")
+       .addField("**$id**","**أمرلارسال رابط السيرفر بالخاص**")   
 	   .addField("**⬎Soon⬐**","**⬎Soon⬐**")
       .addField("**☢ اوامر الاداره**","** **")
        .addField("**$warn**","**لأعطاء انذار لشخص**")
        .addField("**$ban**","**لحظر الشخص**")
        .addField("**$bc**","**لأرسال رسالة جماعية**")
-       .addField("**$clear**","**لمسح الشات برقم محدد**")
-	   
+       .addField("**$clear**","**لمسح الشات برقم محدد**")	   
 	   .addField("**⬎Soon⬐**","**⬎Soon⬐**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
