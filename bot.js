@@ -477,7 +477,6 @@ member.addRole(KinG66S[member.user.id].roles.shift());
 
 
 var prefix = "$";
-
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
