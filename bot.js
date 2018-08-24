@@ -475,8 +475,6 @@ member.addRole(KinG66S[member.user.id].roles.shift());
 
 
 
-
-var prefix = "$";
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -491,7 +489,7 @@ client.on('message', message => {
   
  
 
-if (command == "warn") {
+if (command == "$warn") {
     let say = new Discord.RichEmbed()
     .setDescription(args.join("  "))
     .setColor(0x831f18)
