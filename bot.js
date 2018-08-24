@@ -476,7 +476,7 @@ member.addRole(KinG66S[member.user.id].roles.shift());
 
 
 
-  var prefix = "$";
+var prefix = "$";
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -506,8 +506,7 @@ if (command == "warn") {
   }
 
 
-});
-
+}); 
 
 
 
