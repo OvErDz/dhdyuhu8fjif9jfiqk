@@ -306,43 +306,6 @@ client.on('message', msg => {
 
 
 
-  var prefix = "$";
-
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-  if(!message.channel.guild) return;
-  if(!message.member.hasPermission('MANAGE_MESSAGES')) return;
-  if (message.mentions.users.size < 1) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-  
- 
-
-if (command == "warn") {
-    let say = new Discord.RichEmbed()
-    .setDescription(args.join("  "))
-    .setColor(0x831f18)
-    message.channel.sendEmbed(say);
-    client.channels.get("482591710312923137").send(`**=========================================**`)
-    client.channels.get("482591710312923137").send(`**__New Warn__**`)
-    client.channels.get("482591710312923137").send({embed : say})
-    client.channels.get("482591710312923137").send(`**By : ${message.author.username}#${message.author.discriminator}**`)
-    client.channels.get("482591710312923137").send(`**In Channel : ${message.channel}**`)
-    message.delete();
-  }
-
-
-});
-
-
-
-
-
-
 client.on('message', async message =>{
   if (message.author.boss) return;
 	var prefix = "$";
@@ -507,6 +470,42 @@ console.log(KinG66S[member.user.id].roles.length);
 for(let i = 0; i < KinG66S[member.user.id].roles.length + 1; i++) {
 member.addRole(KinG66S[member.user.id].roles.shift());
 }
+});
+
+
+
+
+
+  var prefix = "$";
+
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+  if(!message.channel.guild) return;
+  if(!message.member.hasPermission('MANAGE_MESSAGES')) return;
+  if (message.mentions.users.size < 1) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+ 
+
+if (command == "warn") {
+    let say = new Discord.RichEmbed()
+    .setDescription(args.join("  "))
+    .setColor(0x831f18)
+    message.channel.sendEmbed(say);
+    client.channels.get("482591710312923137").send(`**=========================================**`)
+    client.channels.get("482591710312923137").send(`**__New Warn__**`)
+    client.channels.get("482591710312923137").send({embed : say})
+    client.channels.get("482591710312923137").send(`**By : ${message.author.username}#${message.author.discriminator}**`)
+    client.channels.get("482591710312923137").send(`**In Channel : ${message.channel}**`)
+    message.delete();
+  }
+
+
 });
 
 
